@@ -21,7 +21,9 @@ class AssetScanner {
 
     await for (final entity in assetsDir.list(recursive: true)) {
       if (entity is File && FileFilter.isAsset(entity.path)) {
-        final relativePath = p.relative(entity.path, from: projectRoot.path);
+        final relativePath = p
+            .relative(entity.path, from: projectRoot.path)
+            .replaceAll(r'\', '/');
         final name = p.basenameWithoutExtension(entity.path);
         final extension = p.extension(entity.path).replaceFirst('.', '');
         final stat = await entity.stat();

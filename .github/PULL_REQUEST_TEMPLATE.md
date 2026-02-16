@@ -35,6 +35,7 @@ Closes #
 
 <!-- to publish to pub.dev -->
 <!-- id-token: write for OIDC-based authentication -->
+<!-- dart pub get && dart analyze && dart test 2>&1    -->
 ```bash
 # 1. Update version in pubspec.yaml
 # 2. Update CHANGELOG.md
