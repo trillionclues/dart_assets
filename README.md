@@ -67,6 +67,40 @@ analyze:
     - "assets/raw/**"
 ```
 
+#### Try It Locally
+
+An example project is included for testing. Run any command against it:
+
+```bash
+# Diagnose project health
+dart run bin/dart_assets.dart doctor --path example/test_project
+
+# Generate type-safe asset code
+dart run bin/dart_assets.dart gen --path example/test_project
+
+# Validate asset configuration
+dart run bin/dart_assets.dart check --path example/test_project
+
+# Find unused assets
+dart run bin/dart_assets.dart unused --path example/test_project
+
+# Preview image optimization (no changes)
+dart run bin/dart_assets.dart optimize --dry-run --path example/test_project
+
+# Watch for changes (Ctrl+C to stop)
+dart run bin/dart_assets.dart watch --path example/test_project
+```
+
+#### How Image Optimization Works
+
+The optimizer uses traditional compression via the [`image`](https://pub.dev/packages/image) Dart package — no AI or external tools required:
+
+- **PNG**: Re-encodes with configurable compression level (0–9)
+- **JPEG**: Re-encodes at a configurable quality (0–100, default 85)
+- **WebP encoding**: Not yet supported (the `image` package only has a WebP decoder). Future versions may integrate AI-powered optimization via Gemini or native tools like `cwebp`
+
+NB: This is purely algorithmic compression — it reduces file size by re-encoding with optimized parameters, not by altering image content. Files that are already well-optimized are left unchanged.
+
 #### Contributing
 
 Contributions are welcome! Please read the guidelines below before submitting a pull request.

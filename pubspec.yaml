@@ -2,11 +2,17 @@ name: dart_assets
 description: >-
   Professional asset management for Flutter projects. Auto-update pubspec.yaml,
   generate type-safe code, and optimize images.
-version: 0.0.1-dev
+version: 0.2.0
 repository: https://github.com/trillionclues/dart_assets
 homepage: https://github.com/trillionclues/dart_assets
 issue_tracker: https://github.com/trillionclues/dart_assets/issues
 documentation: https://github.com/trillionclues/dart_assets#readme
+
+topics:
+  - flutter
+  - assets
+  - code-generation
+  - cli
 
 environment:
   sdk: ^3.0.0

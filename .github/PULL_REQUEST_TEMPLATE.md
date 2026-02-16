@@ -32,3 +32,14 @@ Brief description of what this PR does.
 Closes #
 
 ## Screenshots (if applicable)
+
+<!-- to publish to pub.dev -->
+<!-- id-token: write for OIDC-based authentication -->
+```bash
+# 1. Update version in pubspec.yaml
+# 2. Update CHANGELOG.md
+# 3. Commit and push
+git add -A && git commit -m "chore: release v0.2.0"
+git tag v0.2.0
+git push origin main --tags
+```
