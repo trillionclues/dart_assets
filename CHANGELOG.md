@@ -11,5 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project scaffolding and documentation
 - CI/CD pipeline with GitHub Actions
 - README with usage examples
+- Naming converter for assets
+- Generator for assets
+- CLI for assets
+
 
 [Unreleased]: https://github.com/trillionclues/dart_assets/commits/main

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      id-token: write  # Required for pub.dev authentication
+      id-token: write # for pub.dev authentication
 
     steps:
       - uses: actions/checkout@v4

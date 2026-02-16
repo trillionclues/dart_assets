@@ -1,0 +1,16 @@
+name: test_app
+description: A minimal Flutter project for testing dart_assets CLI.
+version: 1.0.0
+
+environment:
+  sdk: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data.json
+    - assets/icons/home.svg
+    - assets/icons/settings.svg
+    - assets/images/banner.png
+    - assets/images/logo.png
+    - assets/images/photo.jpg

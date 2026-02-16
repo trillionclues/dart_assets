@@ -9,9 +9,7 @@
   <p align="center">
     <a href="https://pub.dev/packages/dart_assets"><img src="https://img.shields.io/pub/v/dart_assets.svg" alt="pub package"></a>
     <a href="https://github.com/trillionclues/dart_assets/actions/workflows/ci.yml"><img src="https://github.com/trillionclues/dart_assets/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-    <a href="https://codecov.io/gh/trillionclues/dart_assets"><img src="https://codecov.io/gh/trillionclues/dart_assets/branch/main/graph/badge.svg" alt="Coverage"></a>
-    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  </p>
+    <a href="https://codecov.io/gh/trillionclues/dart_assets"><img src="https://codecov.io/gh/trillionclues/dart_assets/branch/main/graph/badge.svg" alt="Coverage"></a>  </p>
 </p>
 
 ## Quick Start
