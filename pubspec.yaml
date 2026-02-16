@@ -21,24 +21,24 @@ dependencies:
   # CLI framework
   args: ^2.4.0
   cli_util: ^0.4.0
-  io: ^1.0.4
+  io: ^1.0.5
 
   # File watching
-  watcher: ^1.1.0
-  path: ^1.8.3
+  watcher: ^1.2.1
+  path: ^1.9.1
 
   # YAML parsing
-  yaml: ^3.1.2
-  yaml_edit: ^2.1.1
+  yaml: ^3.1.3
+  yaml_edit: ^2.2.4
 
   # Code generation
-  dart_style: ^2.3.4
+  dart_style: ^2.3.6
 
   # Image processing
-  image: ^4.1.3
+  image: ^4.7.2
 
   # Console output
-  mason_logger: ^0.2.11
+  mason_logger: ^0.2.16
 
 dev_dependencies:
   lints: ^3.0.0
