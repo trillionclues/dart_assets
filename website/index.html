@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dart_assets — Zero-friction asset management for Flutter</title>
+    <meta name="description"
+        content="Stop manually editing pubspec.yaml. dart_assets watches your assets folder, updates your config, and generates type-safe Dart code — automatically.">
+    <meta property="og:title" content="dart_assets — Asset management for Flutter">
+    <meta property="og:description" content="Drop files into assets/, everything else happens automatically.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">
+                    <img src="nav-svg.svg" alt="dart_assets logo" width="24" height="24" class="nav-icon">
+                </span>
+                <span class="logo-text">dart_assets</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">features</a>
+                <a href="https://pub.dev/packages/dart_assets" class="nav-cta" target="_blank" rel="noopener">pub.dev
+                    →</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-badge">Open Source CLI Tool</div>
+            <h1 class="hero-title">
+                Stop editing <span class="highlight">pubspec.yaml</span> files.
+            </h1>
+            <p class="hero-sub">
+                Drop files into <code>assets/</code> and get everything updated automatically
+                <br />Pubspec entries, type-safe Dart code, and more.
+            </p>
+            <div class="hero-actions">
+                <div class="install-box">
+                    <code>dart pub global activate dart_assets</code>
+                    <button class="copy-btn" data-copy="dart pub global activate dart_assets" aria-label="Copy">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" />
+                            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                        </svg>
+                    </button>
+                </div>
+                <a href="#start" class="btn-primary">Quick Start</a>
+                <a href="https://github.com/trillionclues/dart_assets" class="btn-outline" target="_blank"
+                    rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Built for developers who<br>hate busywork</h2>
+            <p class="section-sub">Seven commands. One tool. Every asset problem you've quietly tolerated—solved in
+                seconds.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><span>👁</span> <span class="feature-num">01</span></div>
+                    <h3>Live Watcher</h3>
+                    <p>Add an image, delete a font, rename an icon—pubspec.yaml and your generated code gets updated in
+                        real time. No restarts.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span>⌨️</span> <span class="feature-num">02</span></div>
+                    <h3>Type-Safe Code Gen</h3>
+                    <p>Every asset gets a <code>const String</code> in a generated Dart file. Autocomplete supported &
+                        typos become compile errors.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span>📦</span> <span class="feature-num">03</span></div>
+                    <h3>Image Optimization</h3>
+                    <p>Compress PNGs and JPEGs with one command. Configurable quality. Dry-run mode so you see savings
+                        before committing.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span>🔍</span> <span class="feature-num">04</span></div>
+                    <h3>Unused Detection</h3>
+                    <p>Scans every <code>.dart</code> file in <code>lib/</code> to find assets nobody references. Shows
+                        file sizes so you know what to cut first.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span>✅</span> <span class="feature-num">05</span></div>
+                    <h3>CI-Ready Checks</h3>
+                    <p>Missing files, stale generated code, oversized assets — <code>check</code> catches it all and
+                        returns non-zero so your pipeline breaks early.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span>🩺</span> <span class="feature-num">06</span></div>
+                    <h3>Project Doctor</h3>
+                    <p>New to a project? <code>doctor</code> scans your setup — pubspec, assets folder, flutter config,
+                        generated code — and tells you exactly what's off.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo" id="demo">
+        <div class="container">
+            <p class="section-sub">One command, and your project stays in sync.</p>
+
+            <div class="terminal">
+                <div class="terminal-bar">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">terminal</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="term-line">
+                        <span class="term-prompt">$</span>
+                        <span class="term-cmd" id="typed-cmd"></span>
+                        <span class="term-cursor">▋</span>
+                    </div>
+                    <div class="term-output" id="term-output"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-preview">
+        <div class="container">
+            <div class="code-split">
+                <div class="code-info">
+                    <h2>What gets generated</h2>
+                    <p>Every asset in your project becomes a type-safe constant. Drop a file in, reference it by name.
+                        The generated class updates automatically when you run <code>watch</code> or <code>gen</code>.
+                    </p>
+                    <ul class="check-list">
+                        <li>Autocomplete in your IDE</li>
+                        <li>Compile-time error if an asset is renamed</li>
+                        <li>All paths in one place</li>
+                    </ul>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-dot"></span>
+                        <span>lib/gen/assets.dart</span>
+                    </div>
+                    <pre><code><span class="c">// GENERATED CODE - DO NOT MODIFY BY HAND</span>
+
+<span class="k">class</span> <span class="t">Assets</span> {
+  <span class="t">Assets</span>._();
+
+  <span class="k">static const</span> <span class="t">String</span> <span class="v">logo</span> = <span class="s">'assets/images/logo.png'</span>;
+  <span class="k">static const</span> <span class="t">String</span> <span class="v">banner</span> = <span class="s">'assets/images/banner.png'</span>;
+  <span class="k">static const</span> <span class="t">String</span> <span class="v">homeIcon</span> = <span class="s">'assets/icons/home.svg'</span>;
+  <span class="k">static const</span> <span class="t">String</span> <span class="v">config</span> = <span class="s">'assets/data.json'</span>;
+
+  <span class="k">static const</span> <span class="t">List</span>&lt;<span class="t">String</span>&gt; <span class="v">all</span> = [
+    <span class="v">logo</span>, <span class="v">banner</span>, <span class="v">homeIcon</span>, <span class="v">config</span>,
+  ];
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="start" id="start">
+        <div class="container">
+            <h2 class="section-title">Up and running in 30 seconds</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>Install</h3>
+                        <div class="step-code"><code>dart pub global activate dart_assets</code></div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>Watch</h3>
+                        <div class="step-code"><code>cd your_flutter_project && dart_assets watch</code></div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h3>Build</h3>
+                        <p class="step-desc">Drop files into <code>assets/</code>. Pubspec updates. Code regenerates.
+                            Hot reload picks it up. And its all done!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commands">
+        <div class="container">
+            <h2 class="section-title">All commands</h2>
+            <div class="cmd-table">
+                <div class="cmd-row">
+                    <code class="cmd-name">dart_assets watch</code>
+                    <span class="cmd-desc">Watch assets folder, auto-update pubspec + code on changes</span>
+                </div>
+                <div class="cmd-row">
+                    <code class="cmd-name">dart_assets gen</code>
+                    <span class="cmd-desc">One-time code generation for type-safe asset references</span>
+                </div>
+                <div class="cmd-row">
+                    <code class="cmd-name">dart_assets optimize</code>
+                    <span class="cmd-desc">Compress images for production (supports --dry-run)</span>
+                </div>
+                <div class="cmd-row">
+                    <code class="cmd-name">dart_assets unused</code>
+                    <span class="cmd-desc">Find assets not referenced anywhere in your Dart code</span>
+                </div>
+                <div class="cmd-row">
+                    <code class="cmd-name">dart_assets clean</code>
+                    <span class="cmd-desc">Remove unused assets and update pubspec in one step</span>
+                </div>
+                <div class="cmd-row">
+                    <code class="cmd-name">dart_assets check</code>
+                    <span class="cmd-desc">Validate everything — CI-friendly with proper exit codes</span>
+                </div>
+                <div class="cmd-row">
+                    <code class="cmd-name">dart_assets doctor</code>
+                    <span class="cmd-desc">Diagnose common config issues and missing setup</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <span class="logo-icon">
+                    <img src="nav-svg.svg" alt="dart_assets logo" width="24" height="24" class="nav-icon">
+                </span>
+                <span class="logo-text">dart_assets</span>
+                <span class="footer-version">v0.2.0</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://pub.dev/packages/dart_assets" target="_blank" rel="noopener">pub.dev</a>
+                <a href="https://github.com/trillionclues/dart_assets" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="footer-copy">Built for the Flutter community.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
